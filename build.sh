@@ -4,16 +4,16 @@ set -e
 
 # build the lib first
 echo "BUILDING LIB"
-pushd lib/lib1
+pushd lib/libopaque-cmake
 ./build.sh
-popd # lib/lib1
+popd # lib/libopaque-cmake
 
 echo "BUILDING MAIN"
 rm -rf cmake
 mkdir cmake
 
 pushd cmake
-cmake .. -DCMAKE_PREFIX_PATH=lib/lib1/cmake/
+cmake .. -DCMAKE_PREFIX_PATH=lib/libopaque-cmake/cmake/
 make
 popd
 
