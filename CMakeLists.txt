@@ -6,7 +6,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY bin)
 set(CMAKE_CXX_STANDARD 14)
 set(PACKAGE_NAME "main")
 
-find_package(lib1 REQUIRED)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib/lib1)
+
+include_directories(lib/lib1)
 
 # CLIENT
 add_executable(
@@ -19,7 +21,7 @@ add_executable(
 target_link_libraries(
   ${PACKAGE_NAME}
   
-  lib1::lib1
+  lib1
 )
 
 install(

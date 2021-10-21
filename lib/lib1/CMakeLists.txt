@@ -28,20 +28,7 @@ target_include_directories(
 
 target_link_libraries(
   ${PACKAGE_NAME}
-  
   sodium
 )
 
-include(GNUInstallDirs)
 
-install(
-  TARGETS ${PACKAGE_NAME} sodium
-  EXPORT ${PACKAGE_NAME}_targets
-  INCLUDES DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
-)
-
-export(
-  EXPORT ${PACKAGE_NAME}_targets
-  NAMESPACE ${PACKAGE_NAME}::
-  FILE "${CMAKE_INSTALL_LIBDIR}/cmake/${PACKAGE_NAME}/${PACKAGE_NAME}-config.cmake"
-)
