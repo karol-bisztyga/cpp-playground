@@ -5,7 +5,8 @@ set -e
 # build the lib first
 echo "BUILDING LIB"
 pushd lib
-# ./build.sh
+rm -rf libopaque-cmake
+git clone https://github.com/karol-bisztyga/libopaque-cmake.git
 popd # lib
 
 echo "BUILDING MAIN"
