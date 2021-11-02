@@ -2,11 +2,10 @@
 
 set -e
 
-# build the lib first
-echo "BUILDING LIB"
-pushd lib/lib1
-./build.sh
-popd # lib/lib1
+# build lib
+pushd lib/rust
+cargo build
+popd # lib/rust
 
 echo "BUILDING MAIN"
 rm -rf cmake

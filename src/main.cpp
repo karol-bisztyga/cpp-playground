@@ -1,11 +1,11 @@
 #include <iostream>
 
-#include <hey.h>
-
 using namespace std;
+
+extern "C" void helloRust();
 
 int main()
 {
-  Hey h("aaaa");
-  cout << "Hello " << h.get() << endl;
+  helloRust();
+  cout << "Hello" << endl;
 }
