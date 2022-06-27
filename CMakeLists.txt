@@ -8,7 +8,6 @@ set(PACKAGE_NAME "main")
 
 add_executable(
   ${PACKAGE_NAME}
-
   src/main.cpp
 )
 
