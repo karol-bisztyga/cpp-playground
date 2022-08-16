@@ -3,13 +3,13 @@
 set -e
 
 echo "BUILDING MAIN"
-rm -rf cmake
-mkdir cmake
+rm -rf target
+mkdir target
 
-pushd cmake
+pushd target
 cmake ..
 make
 popd
 
 # run
-./cmake/bin/main
+./target/bin/main
